@@ -1,0 +1,20 @@
+html(lang="en")
+    head
+        link(rel="stylesheet", href="style.css")
+        title #{pageTitle}
+    body 
+        hr
+        h1 Object Detection
+        
+        div.upload_form.box
+            h2.upload_from_title 이미지만 올리세요 ㄹㅇㅋㅋ
+            form(name="image" action="/upload_ok" method="post" enctype="multipart/form-data")
+                input(type="file", id="userFile", name="userFile")
+                input(type="submit")
+            p ※이미지 크기에 따라 1~5초 정도 걸립니다.
+        .obj_list_con.box 
+            h2.obj_list_title Detectable Object List
+            ul.obj_list
+                each item in objectList
+                    li= item
+        hr

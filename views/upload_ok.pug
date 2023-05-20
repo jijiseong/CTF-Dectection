@@ -1,0 +1,14 @@
+
+html(lang="en")
+    head
+        link(rel="stylesheet", href="style.css")
+        title #{pageTitle}
+    body 
+        hr
+        a.go_home(href="upload") home
+        .result_img
+            img(src="result_"+imgName, alt="error")
+        .detection_info 
+            pre #{detection_info[0]}
+            pre #{detection_info[1]}
+        hr  
